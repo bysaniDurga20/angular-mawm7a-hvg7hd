@@ -9,7 +9,7 @@
 		<button (click)="share()">Share</button>
 	</div>
 
-	<app-product-alertscomponent [product]="product">
+	<app-product-alertscomponent [product]="product" (notify)="onNotify()">
 	</app-product-alertscomponent>
 </div>
 
