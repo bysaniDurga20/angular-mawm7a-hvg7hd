@@ -20,7 +20,9 @@ export class ProductDetailsComponent implements OnInit {
     const productid = Number(params.get("ProductId"));
     console.log(productid);
     this.product = products.find(product => product.id == productid);
-
-  
+  }
+  addToCart(product) {
+    this.CartService.addToCart(product);
+    window.alert("your product has been added to cart.");
   }
 }

@@ -8,7 +8,8 @@ import { TopBarComponent } from "./top-bar/top-bar.component";
 import { ProductListComponent } from "./product-list/product-list.component";
 import { ProductAlertscomponentComponent } from "./product-alertscomponent/product-alertscomponent.component";
 import { ProductDetailsComponent } from "./product-details/product-details.component";
-import { CartService } from './cart.service';
+import { CartService } from "./cart.service";
+import { CartComponent } from "./cart/cart.component";
 
 @NgModule({
   imports: [
@@ -22,6 +23,10 @@ import { CartService } from './cart.service';
       {
         path: "products/:ProductId",
         component: ProductDetailsComponent
+      },
+      {
+        path: "cart",
+        component: CartComponent
       }
     ])
   ],
@@ -30,7 +35,8 @@ import { CartService } from './cart.service';
     TopBarComponent,
     ProductListComponent,
     ProductAlertscomponentComponent,
-    ProductDetailsComponent
+    ProductDetailsComponent,
+    CartComponent
   ],
   bootstrap: [AppComponent],
   providers: [CartService]
